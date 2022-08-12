@@ -6,24 +6,29 @@
 
 /* header */
 
-
+body{
+    position: absolute;
+    height: 100vh;
+}
 .contenedor-header{
     background-color: rgb(0, 0, 0);
     width: 100%;
-}
-.contenedor-header div{
-    display: flex;
-    flex: 1;
-    justify-content: space-evenly;
+    height: 15vh;
 }
 .header{
-    height: 130px;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     width: 80%;
     margin: 0 auto;
     align-items: center;
 }
+.contenedor-header div{
+    display: flex;
+    flex: 1;
+    justify-content: space-evenly;
+}
+
 .div-img{
     flex: 1;
     width: 100px;
@@ -32,6 +37,16 @@
     min-width: 40%;
     text-align: left;
     
+}
+.div-img p{
+    color: green;
+    font-size: 50px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    filter: drop-shadow(0 0 2px yellow);
+
 }
 .img-div{
     object-fit: contain;
@@ -59,10 +74,9 @@ ul li a:hover{
 .div-span{
     width: 85%;
     margin: 0 auto;
-    /* background-color: gray; */
 
 }
-span{
+.div-span span{
     display: block;
     padding: 20px 0 10px 0;
     font-weight: bold;
@@ -102,8 +116,38 @@ span{
 }
 
 
+/* footer */
 
 
+footer{
+    background-color: rgb(48, 48, 48);
+    position: absolute;
+    box-sizing: border-box;
+    height: 10vh;
+    width: 100%;
+    bottom: 0;
+    color: aliceblue;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    gap: 20px;
+}
+footer a{
+    flex: 1;
+    text-align: center;
+}
+footer .link{
+    color: white;
+    text-decoration: none;
+}
+footer p{
+    flex:1;
+    text-align: center;
+}
+footer .link:hover{
+    text-decoration: underline;
+}
 
 
 /* media */
@@ -120,6 +164,7 @@ span{
     margin-top: 5px;
     font-size: 16px;
 }
+
 }
 
 
@@ -128,6 +173,7 @@ span{
 .card{
     min-width: 300px;
 }
+
 
 }
 
