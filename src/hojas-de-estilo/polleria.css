@@ -121,7 +121,7 @@ ul li a:hover{
 
 footer{
     background-color: rgb(48, 48, 48);
-    position: absolute;
+    position: fixed;
     box-sizing: border-box;
     height: 10vh;
     width: 100%;
