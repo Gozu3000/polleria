@@ -35,7 +35,7 @@ export default function Header() {
 
         <span className="span_nombre">
             <Link to="/" className="nombre">
-            Rocket
+            Rostick
             </Link>        
         </span>
 
