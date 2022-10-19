@@ -15,8 +15,8 @@ export default function Promociones() {
 
   const extra1 = new Extras('gaseosa personal',extras1)
   const extra2 = new Extras('chicha morada',extras2)
-  const extra3 = new Extras('gaseosa 1.5L',extras3)
-  const extra4 = new Extras('agua natural',extras4)
+  const extra3 = new Extras('agua natural',extras3)
+  const extra4 = new Extras('gaseosa 1/2 L',extras4)
 
 
   const imgExtras = [extra1, extra2, extra3, extra4]
