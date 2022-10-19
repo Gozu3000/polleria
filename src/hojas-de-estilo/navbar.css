@@ -84,15 +84,14 @@ a{
         width: max-content;
         position:fixed;
         width: 100%;
-        top: 60px;
         transform: translate(-100%);
         transition: .3s;
-        height: 100vh;
+        top: 0;
+        z-index: 1;
     }
     li{
         transition: .3s;
         padding: 0;
-        line-height: 18px;
         height: auto;
         width: 100%;
         padding: 15px 0;
@@ -102,6 +101,7 @@ a{
         margin: 0 20px;
         display: flex;
         align-items: center;
+        z-index: 10;
     }
     a{
         font-size: 18px;
@@ -141,9 +141,4 @@ a{
         overflow-y: hidden;
         height: 100vh;
     }
-}
-
-@media screen and (max-width: 550px) {
-
-
 }
