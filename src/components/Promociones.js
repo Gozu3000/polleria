@@ -1,55 +1,52 @@
-import { useEffect, useState } from "react";
 import '../hojas-de-estilo/promociones.css'
+import RFamiliar from './imagenes/rosticks_familiar.jpg'
+import RFamiliarPostres from './imagenes/rosticks_familiar_postres.jpg'
 
-export default function Promociones(props) {
-  const [data, setData] = useState(null);
-  const [arrpromo, setArrpromo] = useState([]);
+export default function Promociones() {
 
 
-  useEffect(() => {
-    fetch("https://62f665ab612c13062b4d9463.mockapi.io/polleria")
-      .then((response) => response.json())
-      .then((data) => {
-        setData(data);
-        setArrpromo(data.filter(e => e.tipo === 'promocion'))
-        // let arr = []
-        // data.map((elemento) => {
-        //     if(elemento.tipo === 'promocion'){
-        //         arr.push(elemento)
-        //         setArrpromo(arr)
-        //     }
-        //   })
+  const Promocion1 = {
+    nombre: '1 rosticks familiar',
+    imagen: RFamiliar,
+    precio: 60
+  }
 
-      });
-  }, []);
-
+  const Promocion2 = {
+    nombre: '1 rosticks familiar + postres',
+    imagen: RFamiliarPostres,
+    precio: 72
+  }
 
   return (
    
     <div className='promociones'>
-
         <section className='section-cards-promociones'>
-        {
-            data === null? ''
-            :
-            arrpromo.map((e) => (
 
-                <div className="card-promociones" key={e.id}>
-                    
-                  <div className='container-img-promociones'>
-                    <img className='img-promociones' src={e.imagen} alt="card" />
-                  </div>
-                  
-                  <div className="text-card-promociones">
-                    <h2 className='h2-promociones'>{e.nombre}</h2>
-                    <p>S/.{e.precio}</p>
-                  </div>
-
+            <div className="card-promociones" >
+                <div className='container-img-promociones'>
+                  <img className='img-promociones' src={Promocion1.imagen} alt="card" />
                 </div>
-            ))
+                
+                <div className="text-card-promociones">
+                  <h2 className='h2-promociones'>{Promocion1.nombre}</h2>
+                  <p>S/.{Promocion1.precio}</p>
+                </div>
+            </div>
 
-        }
 
+            <div className="card-promociones" >
+                
+              <div className='container-img-promociones'>
+                <img className='img-promociones' src={Promocion2.imagen} alt="card" />
+              </div>
+              
+              <div className="text-card-promociones">
+                <h2 className='h2-promociones'>{Promocion2.nombre}</h2>
+                <p>S/.{Promocion2.precio}</p>
+              </div>
+
+            </div>
+  
         </section>
     </div>  
 

@@ -20,6 +20,10 @@ li{
     padding: 0 20px;
     transition: .3s;
 }
+/* .div_ul{
+    position: absolute;
+    height: 900px;
+} */
 ul{
     display: flex;
     width: 100%;
@@ -35,6 +39,7 @@ ul{
     line-height: 40px;
     display: none;
     margin: 20px;
+    /* position: relative; */
 }
 a{
     text-decoration: none;
@@ -75,13 +80,14 @@ a{
         align-items: center;
         list-style: none;
         margin: 0 auto;
-        background-color: #384756;
+        background-color: #384756c4;
         width: max-content;
         position:fixed;
-        width: 200px;
+        width: 100%;
         top: 60px;
         transform: translate(-100%);
         transition: .3s;
+        height: 100vh;
     }
     li{
         transition: .3s;
@@ -132,6 +138,8 @@ a{
     }
     .show{
         transform: translate(0);
+        overflow-y: hidden;
+        height: 100vh;
     }
 }
 

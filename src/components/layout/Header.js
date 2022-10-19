@@ -5,24 +5,22 @@ import '../../hojas-de-estilo/navbar.css'
 
 export default function Header() {
  
-  const ul_ = useRef(null)
   const [active, setActive] = useState(false);
 
-  // function desplegar_menu (){
-  //   ul_.current.className == ""? ul_.current.className = 'show' : ul_.current.className = '' 
-    // ul_.current.classList.toggle("show");
-  // }
-  
   
   const desplegar_menu = () =>{
     setActive(!active);
   }
 
+  const cerrarMenu=()=>{
+    setActive(false)
+  }
+
+
   return (
 
     <div>
       <nav>
-      
         <button 
           className="hamburger hamburger--spring" 
           type="button"
@@ -34,35 +32,32 @@ export default function Header() {
         </button>
 
         <span className="span_nombre">
-            <Link to="/" className="nombre">
-            Rostick
+            <Link to="/" className="nombre" onClick={cerrarMenu}>
+            Rocket
             </Link>        
         </span>
 
         {/* Ul al que se le dio clases por medio de estados */}
+       
+          <ul className={`div_ul ${active? "show": "" }`}>
+              <li>
+                  <Link to="/menu" className="enlace" onClick={cerrarMenu}>
+                  Menu
+                  </Link>
+              </li>
 
-        <ul ref={ul_}
-            className={`${active? "show": "" }`} 
-        >
-
-
-          <li>
-              <Link to="/menu" className="enlace">
-              Menu
-              </Link>
-          </li>
-          <li>
-              <Link to="/promociones" className="enlace">
-              Promociones
-              </Link>
-          </li>
-      
-          <li>
-              <Link to="/extras" className="enlace">
-              Extras
-              </Link>
-          </li>
-        </ul>
+              <li>
+                  <Link to="/promociones" className="enlace" onClick={cerrarMenu}>
+                  Promociones
+                  </Link>
+              </li>
+          
+              <li>
+                  <Link to="/extras" className="enlace" onClick={cerrarMenu}>
+                  Extras
+                  </Link>
+              </li>
+          </ul>
       </nav>
     </div>
   )
