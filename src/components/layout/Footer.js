@@ -54,7 +54,7 @@ return (
 
             </div>
 
-        {/* git checkout -b development  */}
+        {/* git checkout -b development // 2do commit al rama development */}
 
     </div>
 
