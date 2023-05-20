@@ -101,6 +101,9 @@ a{
         align-items: center;
         z-index: 10;
     }
+    .active{
+        position: fixed;    
+    }
     a{
         font-size: 18px;
         transition: .3s;

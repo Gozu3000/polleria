@@ -16,13 +16,14 @@ export default function Header() {
     setActive(false)
   }
 
+  active ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'auto';    
 
   return (
 
     <div>
       <nav>
         <button 
-          className="hamburger hamburger--spring" 
+          className={`hamburger hamburger--spring ${active ? "active" : ""}`} 
           type="button"
           onClick={desplegar_menu}
           >
